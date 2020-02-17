@@ -2,7 +2,7 @@
   <nav :class="{ 'navbar--hidden': !showNavbar }" class="navbar site-nav">
     <div class="flex site-nav-container justify-between">
       <div class="brand-container flex items-center">
-        <a href="/">
+        <a v-scroll-to="{el:'#header', offset: -80}" href="/#header">
           <svg
             id="Layer_1"
             class="brand-logo group"
