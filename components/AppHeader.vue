@@ -5,7 +5,7 @@
         I'm Joey Langley, a user interface professional based in Columbus, Ohio.
       </h1>
       <h3 class="mt-6 text-left text-gray-600 text-xl leading-8">
-        A problem solver with 20 years of experience in design and development.
+        Experienced Designer/Developer focused on exceptional front-end and UI development.
       </h3>
     </div>
   </header>

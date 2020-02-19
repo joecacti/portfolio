@@ -74,11 +74,47 @@
       <section id="about" class="mb-6">
         <div class="flex py-10 lg:py-40 px-6 lg:px-40 justify-center bg-blue-400 flex-col items-center">
           <h1 class="max-w-screen-lg text-gray-100 font-serif font-semibold text-4xl leading-10 md:text-6xl md:leading-extra-loose text-center">
-            It's not what you look at that matters, it's what you see.
+            Do not hire a man who does your work for money, but him who does it for love of it.
           </h1>
           <h3 class="text-gray-200 text-center text-xl leading-8 max-w-screen-md">
-            I use a purpose driven iterative approach to solve complex digital problems. While using an Agile-esque methodology, I prefer a more collaboarative open approach to design, development, and implementation.
+            I have over 20 years experience in <strong>design</strong>, 20 years in <strong>website development</strong>, 6 years specializing in <strong>front-end development</strong>, and 3 years focusing on <strong>UI/UX research and development</strong>.
           </h3>
+        </div>
+      </section>
+      <section id="about" class="mb-6">
+        <div class="flex py-10 lg:py-40 px-6 lg:px-40 justify-center flex-col items-center">
+          <h1 class="max-w-screen-lg font-serif font-semibold text-4xl leading-10 md:text-6xl md:leading-extra-loose text-center">
+            A closer look at my skills and methodology.
+          </h1>
+          <h3 class="text-left text-gray-600 text-xl leading-8 text-center">
+            As a problem solver with 20 years of experience in design and development my concern is speed to value so my skills and methodology are ever changing.  Not one to get caught up on syntax of a particular language or framework, I'm more concerned with the problem at hand and how I can iteratively provide a solution.
+          </h3>
+          <aside class="flex flex-wrap justify-center">
+            <skills-card
+              image="https://tailwindcss.com/img/card-top.jpg"
+              heading="Research"
+              :skills="['Interview', 'Usability Testing', 'Persona', 'User Stories']"
+              copy="In the planning phases I'll interview stakeholders, project managers, and users so I can begin creating user epics and stories which can easily be translated into working tasks for the project. "
+              />
+            <skills-card
+              image="https://res.cloudinary.com/dbtnrdylc/image/upload/c_crop,h_234,w_500/v1582062193/joey-langley-sketchbook_jjn2uu.jpg"
+              heading="Design"
+              :skills="['Mood Boarding', 'Wireframing', 'Prototyping', 'Branding', 'UI Design']"
+              copy="Using Adobe Illustrator, Photoshop, and XD I'm able to create reusable images, wireframes, and prototypes."
+              />
+            <skills-card
+              image="https://res.cloudinary.com/dbtnrdylc/image/upload/c_crop,h_234,w_500/v1582061556/joey-langley-dev-tools_dbryzk.jpg"
+              heading="Tools"
+              :skills="['Adobe Creative Suite', 'Visual Studio Code', 'Git', 'Linux', 'Windows Servers', 'IIS']"
+              copy="My toolbox is always growing and evolving. I'm not so much concerned about how familiar I am with the tool as I am about if the tool is right for the job."
+              />
+            <skills-card
+              image="https://res.cloudinary.com/dbtnrdylc/image/upload/c_crop,h_234,w_500/v1582061956/joey-langley-developer_y6qjx2.jpg"
+              heading="Development"
+              :skills="['HTML', 'CSS/Less/Sass', 'Javascript/Vue.js', 'PHP/Laravel', 'Drupal', 'Wordpress', 'Joomla!']"
+              copy="I develop using the DRY method along with an atomic/modular approach. Never getting too attached to frameworks, libraries, or CMS's and I'm always searching for a better solution to an old problem."
+              />
+          </aside>
         </div>
       </section>
     </main>
@@ -89,12 +125,14 @@
 import AppNavigation from '~/components/AppNavigation.vue'
 import AppHeader from '~/components/AppHeader.vue'
 import PortfolioSection from '~/components/PortfolioSection.vue'
+import SkillsCard from '~/components/SkillsCard.vue'
 
 export default {
   components: {
     AppNavigation,
     AppHeader,
-    PortfolioSection
+    PortfolioSection,
+    SkillsCard
   }
 }
 </script>
