@@ -11,8 +11,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_vuescrollto_7e850707 from 'nuxt_plugin_vuescrollto_7e850707' // Source: ./vue-scrollto.js (mode: 'client')
-import nuxt_plugin_axios_557bfe7c from 'nuxt_plugin_axios_557bfe7c' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_templatesplugin78080f00_cca6d818 from 'nuxt_plugin_templatesplugin78080f00_cca6d818' // Source: ./templates.plugin.78080f00.js (mode: 'all')
+import nuxt_plugin_vuescrollto_7bb71174 from 'nuxt_plugin_vuescrollto_7bb71174' // Source: ./vue-scrollto.js (mode: 'client')
+import nuxt_plugin_axios_c8626d3a from 'nuxt_plugin_axios_c8626d3a' // Source: ./axios.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -146,12 +147,16 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (process.client && typeof nuxt_plugin_vuescrollto_7e850707 === 'function') {
-    await nuxt_plugin_vuescrollto_7e850707(app.context, inject)
+  if (typeof nuxt_plugin_templatesplugin78080f00_cca6d818 === 'function') {
+    await nuxt_plugin_templatesplugin78080f00_cca6d818(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_557bfe7c === 'function') {
-    await nuxt_plugin_axios_557bfe7c(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vuescrollto_7bb71174 === 'function') {
+    await nuxt_plugin_vuescrollto_7bb71174(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_c8626d3a === 'function') {
+    await nuxt_plugin_axios_c8626d3a(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

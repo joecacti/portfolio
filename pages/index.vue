@@ -10,62 +10,64 @@
           <h1 class="max-w-screen-lg text-gray-100 font-serif font-semibold text-4xl leading-10 md:text-6xl md:leading-extra-loose text-center">
             It's not what you look at that matters, it's what you see.
           </h1>
-          <h3 class="text-gray-500 text-center text-xl leading-8 max-w-screen-md">
-            I use a purpose driven iterative approach to solve complex digital problems. While using an Agile-esque methodology I prefer a more collaboarative open approach to design, development, and implementation.
-          </h3>
-          <aside class="flex mt-12 justify-evenly w-full flex-wrap">
-            <div class="graph m-4">
-              <div class="step">
-                <div class="labels" style="opacity: 1;">
-                  <p>Discover</p><span>and Plan</span>
-                </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <div class="central">
-                    <div class="inner" />
+          <div>
+            <h3 class="text-gray-500 text-center text-xl leading-8 max-w-screen-md">
+              I use a purpose driven iterative approach to solve complex digital problems. While using an Agile-esque methodology I prefer a more collaboarative open approach to design, development, and implementation.
+            </h3>
+            <aside class="flex mt-12 justify-evenly w-full flex-wrap">
+              <div class="graph m-4">
+                <div class="step">
+                  <div class="labels" style="opacity: 1;">
+                    <p>Discover</p><span>and Plan</span>
+                  </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="central">
+                      <div class="inner" />
+                    </div>
                   </div>
+                  <div class="path" style="opacity: 1;" />
                 </div>
-                <div class="path" style="opacity: 1;" />
               </div>
-            </div>
-            <div class="graph m-4">
-              <div class="step">
-                <div class="labels" style="opacity: 1;">
-                  <p>Design</p><span>and Develop</span>
-                </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <div class="central">
-                    <div class="inner" />
+              <div class="graph m-4">
+                <div class="step">
+                  <div class="labels" style="opacity: 1;">
+                    <p>Design</p><span>and Develop</span>
+                  </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="central">
+                      <div class="inner" />
+                    </div>
                   </div>
+                  <div class="path" style="opacity: 1;" />
                 </div>
-                <div class="path" style="opacity: 1;" />
               </div>
-            </div>
-            <div class="graph m-4">
-              <div class="step">
-                <div class="labels" style="opacity: 1;">
-                  <p>Push</p><span>and Test</span>
-                </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <div class="central">
-                    <div class="inner" />
+              <div class="graph m-4">
+                <div class="step">
+                  <div class="labels" style="opacity: 1;">
+                    <p>Push</p><span>and Test</span>
+                  </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="central">
+                      <div class="inner" />
+                    </div>
                   </div>
+                  <div class="path" style="opacity: 1;" />
                 </div>
-                <div class="path" style="opacity: 1;" />
               </div>
-            </div>
-            <div class="graph m-4">
-              <div class="step">
-                <div class="labels" style="opacity: 1;">
-                  <p>Learn</p><span>and Document</span>
-                </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <div class="central">
-                    <div class="inner" />
+              <div class="graph m-4">
+                <div class="step">
+                  <div class="labels" style="opacity: 1;">
+                    <p>Learn</p><span>and Document</span>
+                  </div><div class="circle" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <div class="central">
+                      <div class="inner" />
+                    </div>
                   </div>
+                  <div class="path" style="opacity: 1;" />
                 </div>
-                <div class="path" style="opacity: 1;" />
               </div>
-            </div>
-          </aside>
-          <h3 class="text-gray-500 text-center text-xl leading-8 max-w-screen-md my-8">
-            All of my projects are as unique and important as the people I'm working with and for. Different assumptions can be made and talents to be gleaned. The above graph is merely a starting point, but in reality it's not the road taken that is important but the destination.
-          </h3>
+            </aside>
+            <h3 class="text-gray-500 text-center text-xl leading-8 max-w-screen-md my-8">
+              All of my projects are as unique and important as the people I'm working with and for. Different assumptions can be made and talents to be gleaned. The above graph is merely a starting point, but in reality it's not the road taken that is important but the destination.
+            </h3>
+          </div>
         </div>
       </section>
       <section id="portfolio">
@@ -87,36 +89,37 @@
             A closer look at my skills and methodology.
           </h1>
           <h3 class="text-left text-gray-600 text-xl leading-8 text-center">
-            As a problem solver with 20 years of experience in design and development my concern is speed to value so my skills and methodology are ever changing.  Not one to get caught up on syntax of a particular language or framework, I'm more concerned with the problem at hand and how I can iteratively provide a solution.
+            As an experienced problem solver in design and development, my concern is speed to value so my skills and methodology are ever changing.  Not one to get caught up on syntax of a particular language or framework, I'm more concerned with the problem at hand and how I can iteratively provide a solution.
           </h3>
-          <aside class="flex flex-wrap justify-center">
+          <aside class="flex flex-wrap justify-around">
             <skills-card
-              image="https://tailwindcss.com/img/card-top.jpg"
-              heading="Research"
               :skills="['Interview', 'Usability Testing', 'Persona', 'User Stories']"
+              image="https://res.cloudinary.com/dbtnrdylc/image/upload/v1582118915/joey-langley-research_brl7qq.jpg"
+              heading="Research"
               copy="In the planning phases I'll interview stakeholders, project managers, and users so I can begin creating user epics and stories which can easily be translated into working tasks for the project. "
-              />
+            />
             <skills-card
+              :skills="['Mood Boarding', 'Wireframing', 'Prototyping', 'Branding', 'UI Design']"
               image="https://res.cloudinary.com/dbtnrdylc/image/upload/c_crop,h_234,w_500/v1582062193/joey-langley-sketchbook_jjn2uu.jpg"
               heading="Design"
-              :skills="['Mood Boarding', 'Wireframing', 'Prototyping', 'Branding', 'UI Design']"
               copy="Using Adobe Illustrator, Photoshop, and XD I'm able to create reusable images, wireframes, and prototypes."
-              />
+            />
             <skills-card
+              :skills="['Adobe Creative Suite', 'Visual Studio Code', 'Git', 'Linux', 'Windows Servers', 'IIS']"
               image="https://res.cloudinary.com/dbtnrdylc/image/upload/c_crop,h_234,w_500/v1582061556/joey-langley-dev-tools_dbryzk.jpg"
               heading="Tools"
-              :skills="['Adobe Creative Suite', 'Visual Studio Code', 'Git', 'Linux', 'Windows Servers', 'IIS']"
               copy="My toolbox is always growing and evolving. I'm not so much concerned about how familiar I am with the tool as I am about if the tool is right for the job."
-              />
+            />
             <skills-card
+              :skills="['HTML', 'CSS/Less/Sass', 'Javascript/Vue.js', 'PHP/Laravel', 'Drupal', 'Wordpress', 'Joomla!']"
               image="https://res.cloudinary.com/dbtnrdylc/image/upload/c_crop,h_234,w_500/v1582061956/joey-langley-developer_y6qjx2.jpg"
               heading="Development"
-              :skills="['HTML', 'CSS/Less/Sass', 'Javascript/Vue.js', 'PHP/Laravel', 'Drupal', 'Wordpress', 'Joomla!']"
               copy="I develop using the DRY method along with an atomic/modular approach. Never getting too attached to frameworks, libraries, or CMS's and I'm always searching for a better solution to an old problem."
-              />
+            />
           </aside>
         </div>
       </section>
+      <app-footer />
     </main>
   </div>
 </template>
@@ -126,13 +129,15 @@ import AppNavigation from '~/components/AppNavigation.vue'
 import AppHeader from '~/components/AppHeader.vue'
 import PortfolioSection from '~/components/PortfolioSection.vue'
 import SkillsCard from '~/components/SkillsCard.vue'
+import AppFooter from '~/components/AppFooter.vue'
 
 export default {
   components: {
     AppNavigation,
     AppHeader,
     PortfolioSection,
-    SkillsCard
+    SkillsCard,
+    AppFooter
   }
 }
 </script>

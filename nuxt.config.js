@@ -44,8 +44,12 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    'nuxt-fontawesome'
   ],
+  fontawesome: {
+    component: 'fa'
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
