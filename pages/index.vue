@@ -70,10 +70,10 @@
           </div>
         </div>
       </section>
-      <section id="joey-portfolio">
+      <section id="joey-portfolio" class="flex justify-center items-center">
         <portfolio-section />
       </section>
-      <section id="about" class="mb-6">
+      <section id="joey-resume" class="mb-6">
         <div class="flex py-10 lg:py-40 px-6 lg:px-40 justify-center bg-blue-400 flex-col items-center">
           <h1 class="max-w-screen-lg text-gray-100 font-serif font-semibold text-4xl leading-10 md:text-6xl md:leading-extra-loose text-center">
             Do not hire a man who does your work for money, but him who does it for love of it.
@@ -81,6 +81,9 @@
           <h3 class="text-gray-200 text-center text-xl leading-8 max-w-screen-md">
             I have over 20 years experience in <strong>design</strong>, 20 years in <strong>website development</strong>, 6 years specializing in <strong>front-end development</strong>, and 3 years focusing on <strong>UI/UX research and development</strong>.
           </h3>
+          <a href="/downloads/joey-langley-resume.pdf" download aria-label="Download my resume in PDF file format" class="flex justify-center items-center mt-8 bg-gray-100 hover:bg-gray-800 hover:text-gray-100 text-gray-800 text-sm font-normal py-1 px-4 rounded-full transition-colors duration-300">
+            <fa :icon="fas.faFilePdf" class="mr-2 h-4" /> <span>Download Resume</span>
+          </a>
         </div>
       </section>
       <section id="joey-about" class="mb-6">
@@ -125,6 +128,7 @@
 </template>
 
 <script>
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import AppNavigation from '~/components/AppNavigation.vue'
 import AppHeader from '~/components/AppHeader.vue'
 import PortfolioSection from '~/components/PortfolioSection.vue'
@@ -138,6 +142,11 @@ export default {
     PortfolioSection,
     SkillsCard,
     AppFooter
+  },
+  computed: {
+    fas () {
+      return fas
+    }
   }
 }
 </script>

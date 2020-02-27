@@ -27,11 +27,12 @@
       </div>
       <div class="user-action-buttons">
         <a v-scroll-to="'#joey-workflow'" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Workflow</a>
-        <a v-scroll-to="'#joey-portfolio'" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Portfolio</a>
+        <a v-scroll-to="{el:'#joey-portfolio', offset: -100}" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Portfolio</a>
+        <a v-scroll-to="'#joey-resume'" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Resume</a>
         <a v-scroll-to="'#joey-about'" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">About</a>
-        <button class="ml-4 border border-orange-500 bg-transparent hover:bg-orange-500 hover:text-orange-100 text-orange-500 text-sm font-normal py-1 px-4 rounded-full transition-colors duration-300">
+        <a href="mailto:solutions@joeylangley.com" aria-label="Link to my email" class="ml-4 border border-orange-500 bg-transparent hover:bg-orange-500 hover:text-orange-100 text-orange-500 text-sm font-normal py-1 px-4 rounded-full transition-colors duration-300">
           Contact
-        </button>
+        </a>
       </div>
     </div>
   </nav>
