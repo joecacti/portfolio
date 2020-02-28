@@ -79,7 +79,7 @@
             Do not hire a man who does your work for money, but him who does it for love of it.
           </h1>
           <h3 class="text-gray-200 text-center text-xl leading-8 max-w-screen-md">
-            I have over 20 years experience in <strong>design</strong>, 20 years in <strong>website development</strong>, 6 years specializing in <strong>front-end development</strong>, and 3 years focusing on <strong>UI/UX research and development</strong>.
+            I have over 20 years experience in <strong>design</strong>, 20 years in <strong>website development</strong>, 6 years specializing in <strong>front-end development</strong>, and 4 years focusing on <strong>UI/UX research and development</strong>.
           </h3>
           <a href="/downloads/joey-langley-resume.pdf" download aria-label="Download my resume in PDF file format" class="flex justify-center items-center mt-8 bg-gray-100 hover:bg-gray-800 hover:text-gray-100 text-gray-800 text-sm font-normal py-1 px-4 rounded-full transition-colors duration-300">
             <fa :icon="fas.faFilePdf" class="mr-2 h-4" /> <span>Download Resume</span>

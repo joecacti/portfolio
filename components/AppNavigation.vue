@@ -26,10 +26,10 @@
         </a>
       </div>
       <div class="user-action-buttons">
-        <a v-scroll-to="'#joey-workflow'" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Workflow</a>
-        <a v-scroll-to="{el:'#joey-portfolio', offset: -100}" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Portfolio</a>
-        <a v-scroll-to="'#joey-resume'" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Resume</a>
-        <a v-scroll-to="'#joey-about'" href="#" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">About</a>
+        <a v-scroll-to="'#joey-workflow'" href="/" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Workflow</a>
+        <a v-scroll-to="{el:'#joey-portfolio', offset: -100}" href="/#joey-portfolio" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Portfolio</a>
+        <a v-scroll-to="'#joey-resume'" href="/#joey-resume" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">Resume</a>
+        <a v-scroll-to="'#joey-about'" href="/#joey-about" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300">About</a>
         <a href="mailto:solutions@joeylangley.com" aria-label="Link to my email" class="ml-4 border border-orange-500 bg-transparent hover:bg-orange-500 hover:text-orange-100 text-orange-500 text-sm font-normal py-1 px-4 rounded-full transition-colors duration-300">
           Contact
         </a>
@@ -50,6 +50,11 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.onScroll)
+    /*
+    if (window.$nuxt.$route.hash) {
+      this.scrollToHash()
+    }
+    */
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.onScroll)

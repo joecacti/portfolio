@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="max-w-screen-md py-4 px-6 lg:px-24">
+    <div class="max-w-screen-md pt-8 px-6 lg:px-24 min-h-screen">
       <h1 class="font-serif font-semibold text-left text-4xl leading-10 md:text-6xl md:leading-extra-loose">
         I'm Joey Langley, a user interface professional based in Columbus, Ohio.
       </h1>
