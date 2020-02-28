@@ -14,9 +14,6 @@
         <a href="tel:7406061690" aria-label="Link to call my cellphone" class="flex mb-4 text-orange-400 hover:text-orange-500 transition-colors duration-300 items-center"><fa :icon="fas.faPhone" class="mr-2 ml-4 h-3" />740.606.1690</a>
       </h5>
       <h5 class="text-gray-200 flex items-center">
-        Made using
-      </h5>
-      <h5 class="text-gray-200 flex items-center">
         <a href="https://vuejs.org/" target="_blank" aria-label="Link to Vue.js site" rel="noreferrer" class="hover:text-green-400 transition-colors duration-300 flex items-center">
           <fa :icon="faVuejs" class="h-6 ml-4 mr-2" />
           Vue.js
@@ -29,9 +26,6 @@
           <fa :icon="faCss3" class="h-6 ml-4 mr-2" />
           Tailwindcss
         </a>
-      </h5>
-      <h5 class="text-gray-200 flex items-center mt-4">
-        Hosted using
       </h5>
       <h5 class="text-gray-200 flex items-center">
         <a href="https://www.digitalocean.com/" target="_blank" aria-label="Link to Digital Ocean site" rel="noreferrer" class="hover:text-blue-500 transition-colors duration-300 flex items-center">
