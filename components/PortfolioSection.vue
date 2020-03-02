@@ -76,7 +76,7 @@ article>div>a:hover>img {
   max-width: 500px;
   }
   .portfolio-thinking {
-    background-image: url(/images/joey-thinking.jpg);
+    background-image: url(/images/joey-langley-coconut.png);
     background-color: #4a5f7c;
     background-size: cover;
 }
