@@ -11,6 +11,10 @@
           <h3 class="text-gray-600 text-center text-xl leading-8 max-w-screen-md">
             Workflow is a tool which can be included in home grown applications to help the user create processes and actions based on their specific system without being a developer.
           </h3>
+          <div class="w-auto">
+            <img src="/images/new-workflow-diagram.png" />
+            <img src="/images/new-workflow-diagram-horizontal.png" />
+          </div>
         </div>
       </section>
       <section id="workflow-story">
@@ -165,9 +169,9 @@
               </a>
             </div>
             <div class="ml-3 inline-flex rounded-md shadow">
-              <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-orange-600 bg-white hover:text-orange-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <nuxt-link to="/portfolio/temperature-monitoring-app" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-orange-600 bg-white hover:text-orange-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                 Visit next project <fa :icon="fas.faChevronRight" class="ml-2 h-3" />
-              </a>
+              </nuxt-link>
             </div>
           </div>
         </div>
