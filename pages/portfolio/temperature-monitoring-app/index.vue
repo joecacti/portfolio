@@ -1,9 +1,9 @@
 <template>
-  <div class="workflow">
+  <div class="temp-monitoring">
     <app-navigation />
     <main class="flex flex-col">
       <header class="flex min-h-screen justify-center items-center px-6 lg:px-40 background-tint" />
-      <section id="workflow-story">
+      <section id="temp-monitoring-story">
         <div class="flex py-10 lg:py-40 px-6 lg:px-40 justify-center flex-col items-center">
           <h1 class="max-w-screen-lg font-serif font-semibold text-4xl leading-10 md:text-6xl md:leading-extra-loose text-center">
             Temperature Monitoring App
@@ -11,6 +11,9 @@
           <h3 class="text-gray-600 text-center text-xl leading-8 max-w-screen-md">
             Thank you for wanting to check out my work.  This app is used to monitor cold storage eg., medication temperatures, room abient temperatures, and humidity levels.  I wireframed and prototyped this app using Adobe XD.  I developed the UI using Vue.js, Bootstrap, Bootstrap Vue and a lot of custom SCSS.  To communicate with the database I used axios to hit API endpoints created using Laravel. I'm making a concerted effort in making this the best experience possible. I'll be consistantly updating my portfolio section.
           </h3>
+          <div class="w-auto">
+            <img src="/images/mac-display-temp-rings.png" title="Image of temperature monitoring dashboard">
+          </div>
         </div>
       </section>
       <div class="bg-gray-50">
@@ -67,7 +70,7 @@ export default {
 </script>
 
 <style>
-.workflow header {
+.temp-monitoring header {
     background-image: url(/images/portfolio-project-stat-temp-app.png);
     background-color: #4a5f7c;
     background-size: cover;

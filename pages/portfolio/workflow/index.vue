@@ -12,9 +12,34 @@
             Workflow is a tool which can be included in home grown applications to help the user create processes and actions based on their specific system without being a developer.
           </h3>
           <div class="w-auto">
-            <img src="/images/new-workflow-diagram.png" />
-            <img src="/images/new-workflow-diagram-horizontal.png" />
+            <img src="/images/notebook-workflow.png" title="Image of notebook with workflow">
           </div>
+          <section class="flex flex-wrap justify-center mt-8">
+            <div class="py-4 px-4" style="max-width: 500px">
+              <h3 class="text-center">
+                Quickly create new Workflows
+              </h3>
+              <img src="/images/create-new-workflow.gif" title="Animated gif of user creating new workflow">
+            </div>
+            <div class="py-4 px-4 w-1/2" style="max-width: 500px">
+              <h3 class="text-center">
+                Add conditional statements
+              </h3>
+              <img src="/images/create-workflow-condition.gif" title="Animated gif of user creating condition">
+            </div>
+            <div class="py-4 px-4 w-1/2" style="max-width: 500px">
+              <h3 class="text-center">
+                Add action events if condition is true
+              </h3>
+              <img src="/images/action-workflow-true.gif" title="Animated gif of user adding action if true">
+            </div>
+            <div class="py-4 px-4 w-1/2" style="max-width: 500px">
+              <h3 class="text-center">
+                Add action events if condition is false
+              </h3>
+              <img src="/images/action-workflow-false.gif" title="Animated gif of user adding action if false">
+            </div>
+          </section>
         </div>
       </section>
       <section id="workflow-story">
@@ -98,7 +123,7 @@
                     </div>
                   </div>
                   <div class="py-8 px-6 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
-                    <img src="/images/workflow-select-options-screen.png" style="width:300px" />
+                    <img src="/images/workflow-select-options-screen.png" style="width:300px">
                   </div>
                 </div>
               </div>

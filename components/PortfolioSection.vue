@@ -32,7 +32,7 @@
               Tech Savvy, Designer & Developer
             </div>
             <h2 class="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
-              I'm just here to help
+              How can I help?
             </h2>
             <p class="mt-3 text-lg leading-7 text-gray-300">
               By employing Adobe Creative Suite (primarily Photoshop, Illustrator, InDesign, and XD), Sketch, HTML, CSS, and Javascript, I'm able to efficiently and quickly deliver a custom design and user experience for each project. I'm also adept at working with Angular.js, Vue.js, and PHP for added project versitility. My experience in Wordpress, Joomla!, Drupal, and Jekyll knowledge will add value to any team that needs to manage a site without HTML knowledge.

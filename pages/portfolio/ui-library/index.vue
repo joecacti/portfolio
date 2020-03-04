@@ -1,9 +1,9 @@
 <template>
-  <div class="workflow">
+  <div class="ui-library">
     <app-navigation />
     <main class="flex flex-col">
       <header class="flex min-h-screen justify-center items-center px-6 lg:px-40 background-tint" />
-      <section id="workflow-story">
+      <section id="ui-library-story">
         <div class="flex py-10 lg:py-40 px-6 lg:px-40 justify-center flex-col items-center">
           <h1 class="max-w-screen-lg font-serif font-semibold text-4xl leading-10 md:text-6xl md:leading-extra-loose text-center">
             UI Library - Vue.js & Tailwind.css
@@ -67,7 +67,7 @@ export default {
 </script>
 
 <style>
-.workflow header {
+.ui-library header {
     background-image: url(/images/portfolio-project-ui-library.png);
     background-color: #4a5f7c;
     background-size: cover;
