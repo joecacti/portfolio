@@ -1,5 +1,11 @@
 <template>
-  <section class="max-w-screen-lg items-center justify-center">
+  <section class="max-w-screen-lg items-center justify-center mt-4">
+    <h1 class="max-w-screen-lg font-serif font-semibold text-4xl leading-10 md:text-6xl md:leading-extra-loose text-center">
+      View a few of my completed projects
+    </h1>
+    <h3 class="text-left text-gray-600 text-xl leading-8 text-center">
+      Please click on the images below to view some recent examples of my work. I'm in the process of updating this section, but the examples shown and linked to below is a great introduction of my skills as a designer and develper ranging from enterprise applications to small business websites.
+    </h3>
     <article class="ml-auto mr-auto max-w-screen-lg">
       <div class="hover:shadow-image h-auto overflow-hidden mb-6 transition-all duration-150 cursor-pointer">
         <nuxt-link to="/portfolio/workflow" class="cursor-pointer" aria-label="Link to portfolio page for my workflow project">
@@ -7,6 +13,22 @@
         </nuxt-link>
       </div>
     </article>
+    <div class="flex justify-between">
+      <article class="small-image">
+        <div class="hover:shadow-image h-auto overflow-hidden mb-6 transition-all duration-150 cursor-pointer">
+          <nuxt-link to="/portfolio/godogsafe-site" class="cursor-pointer">
+            <img src="~/assets/portfolio-project-godogsafe.png" class="h-auto transition-all duration-700" alt="godogsafe website on macbook">
+          </nuxt-link>
+        </div>
+      </article>
+      <article class="small-image">
+        <div class="hover:shadow-image h-auto overflow-hidden mb-6 transition-all duration-150 cursor-pointer">
+          <nuxt-link to="/portfolio/joeylangley-site" class="cursor-pointer">
+            <img src="~/assets/portfolio-project-joeylangley.png" class="h-auto transition-all duration-700" alt="joelangley website on macbook">
+          </nuxt-link>
+        </div>
+      </article>
+    </div>
     <div class="flex justify-between">
       <article class="small-image">
         <div class="hover:shadow-image h-auto overflow-hidden mb-6 transition-all duration-150 cursor-pointer">

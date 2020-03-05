@@ -185,7 +185,7 @@
           <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
             Next Project
             <br>
-            <span class="text-orange-600">Temperature Monitoring App</span>
+            <span class="text-orange-600">godogsafe.com site</span>
           </h2>
           <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
             <div class="inline-flex rounded-md shadow">
@@ -194,7 +194,7 @@
               </a>
             </div>
             <div class="ml-3 inline-flex rounded-md shadow">
-              <nuxt-link to="/portfolio/temperature-monitoring-app" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-orange-600 bg-white hover:text-orange-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <nuxt-link to="/portfolio/godogsafe-site" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-orange-600 bg-white hover:text-orange-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                 Visit next project <fa :icon="fas.faChevronRight" class="ml-2 h-3" />
               </nuxt-link>
             </div>

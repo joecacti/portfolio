@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="welcome-page">
     <div class="max-w-screen-md pt-8 px-6 lg:px-24 min-h-screen">
       <h1 class="font-serif font-semibold text-left text-4xl leading-10 md:text-6xl md:leading-extra-loose">
         I'm Joey Langley, a user interface professional based in Columbus, Ohio.
@@ -24,4 +24,13 @@ export default {
 </script>
 
 <style scoped>
+.welcome-page {
+    background-image: url(/images/header-image.jpeg);
+    background-color: #e2e8f0;
+    background-size: cover;
+}
+.background-tint {
+    background-color: rgba(81, 73, 85, 0.6);
+    background-blend-mode: multiply;
+}
 </style>

@@ -78,7 +78,7 @@ export default {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: white;
+    background-color: #FCFAFD;
     z-index: 9999;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
     transition: 0.1s all ease-out;
@@ -123,7 +123,6 @@ export default {
 }
 .site-nav.navbar--hidden {
     background-color: none;
-    background: inherit;
     box-shadow: none;
 }
 </style>

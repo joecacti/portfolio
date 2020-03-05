@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _70a963a4 = () => interopDefault(import('../pages/portfolio/godogsafe-site/index.vue' /* webpackChunkName: "pages/portfolio/godogsafe-site/index" */))
+const _ba793d28 = () => interopDefault(import('../pages/portfolio/joeylangley-site/index.vue' /* webpackChunkName: "pages/portfolio/joeylangley-site/index" */))
 const _228b7ff4 = () => interopDefault(import('../pages/portfolio/temperature-monitoring-app/index.vue' /* webpackChunkName: "pages/portfolio/temperature-monitoring-app/index" */))
 const _55a7a9b3 = () => interopDefault(import('../pages/portfolio/ui-library/index.vue' /* webpackChunkName: "pages/portfolio/ui-library/index" */))
 const _947377a0 = () => interopDefault(import('../pages/portfolio/workflow/index.vue' /* webpackChunkName: "pages/portfolio/workflow/index" */))
@@ -25,6 +27,14 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/portfolio/godogsafe-site",
+    component: _70a963a4,
+    name: "portfolio-godogsafe-site"
+  }, {
+    path: "/portfolio/joeylangley-site",
+    component: _ba793d28,
+    name: "portfolio-joeylangley-site"
+  }, {
     path: "/portfolio/temperature-monitoring-app",
     component: _228b7ff4,
     name: "portfolio-temperature-monitoring-app"
