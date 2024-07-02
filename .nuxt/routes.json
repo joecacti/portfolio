@@ -1,0 +1,44 @@
+[
+  {
+    "name": "portfolio-godogsafe-site",
+    "path": "/portfolio/godogsafe-site",
+    "component": "/Users/jlangley/Projects/joeylangley/pages/portfolio/godogsafe-site/index.vue",
+    "chunkName": "pages/portfolio/godogsafe-site/index",
+    "_name": "_70a963a4"
+  },
+  {
+    "name": "portfolio-joeylangley-site",
+    "path": "/portfolio/joeylangley-site",
+    "component": "/Users/jlangley/Projects/joeylangley/pages/portfolio/joeylangley-site/index.vue",
+    "chunkName": "pages/portfolio/joeylangley-site/index",
+    "_name": "_ba793d28"
+  },
+  {
+    "name": "portfolio-temperature-monitoring-app",
+    "path": "/portfolio/temperature-monitoring-app",
+    "component": "/Users/jlangley/Projects/joeylangley/pages/portfolio/temperature-monitoring-app/index.vue",
+    "chunkName": "pages/portfolio/temperature-monitoring-app/index",
+    "_name": "_228b7ff4"
+  },
+  {
+    "name": "portfolio-ui-library",
+    "path": "/portfolio/ui-library",
+    "component": "/Users/jlangley/Projects/joeylangley/pages/portfolio/ui-library/index.vue",
+    "chunkName": "pages/portfolio/ui-library/index",
+    "_name": "_55a7a9b3"
+  },
+  {
+    "name": "portfolio-workflow",
+    "path": "/portfolio/workflow",
+    "component": "/Users/jlangley/Projects/joeylangley/pages/portfolio/workflow/index.vue",
+    "chunkName": "pages/portfolio/workflow/index",
+    "_name": "_947377a0"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/jlangley/Projects/joeylangley/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_4fae1a4a"
+  }
+]

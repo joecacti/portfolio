@@ -1,4 +1,5 @@
 import Vue from 'vue'
+
 import Meta from 'vue-meta'
 import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
@@ -40,18 +41,32 @@ Vue.component('NChild', NuxtChild)
 // Component: <Nuxt>
 Vue.component(Nuxt.name, Nuxt)
 
+Object.defineProperty(Vue.prototype, '$nuxt', {
+  get() {
+    const globalNuxt = this.$root ? this.$root.$options.$nuxt : null
+    if (process.client && !globalNuxt && typeof window !== 'undefined') {
+      return window.$nuxt
+    }
+    return globalNuxt
+  },
+  configurable: true
+})
+
 Vue.use(Meta, {"keyName":"head","attribute":"data-n-head","ssrAttribute":"data-n-head-ssr","tagIDKeyName":"hid"})
 
 const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
-async function createApp (ssrContext) {
-  const router = await createRouter(ssrContext)
+async function createApp(ssrContext, config = {}) {
+  const store = null
+  const router = await createRouter(ssrContext, config, { store })
 
   // Create Root instance
 
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
+    head: {"htmlAttrs":{"lang":"en"},"title":"joeylangley","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+
     router,
     nuxt: {
       defaultTransition,
@@ -75,14 +90,19 @@ async function createApp (ssrContext) {
       },
 
       err: null,
+      errPageReady: false,
       dateErr: null,
       error (err) {
         err = err || null
         app.context._errored = Boolean(err)
         err = err ? normalizeError(err) : null
-        const nuxt = this.nuxt || this.$options.nuxt
+        let nuxt = app.nuxt // to work with @vue/composition-api, see https://github.com/nuxt/nuxt.js/issues/6517#issuecomment-573280207
+        if (this) {
+          nuxt = this.nuxt || this.$options.nuxt
+        }
         nuxt.dateErr = Date.now()
         nuxt.err = err
+        nuxt.errPageReady = false
         // Used in src/server.js
         if (ssrContext) {
           ssrContext.nuxt.error = err
@@ -112,20 +132,25 @@ async function createApp (ssrContext) {
     req: ssrContext ? ssrContext.req : undefined,
     res: ssrContext ? ssrContext.res : undefined,
     beforeRenderFns: ssrContext ? ssrContext.beforeRenderFns : undefined,
+    beforeSerializeFns: ssrContext ? ssrContext.beforeSerializeFns : undefined,
     ssrContext
   })
 
-  const inject = function (key, value) {
+  function inject(key, value) {
     if (!key) {
       throw new Error('inject(key, value) has no key provided')
     }
     if (value === undefined) {
-      throw new Error('inject(key, value) has no value provided')
+      throw new Error(`inject('${key}', value) has no value provided`)
     }
 
     key = '$' + key
     // Add into app
     app[key] = value
+    // Add into context
+    if (!app.context[key]) {
+      app.context[key] = value
+    }
 
     // Check if plugin not already installed
     const installKey = '__nuxt_' + key + '_installed__'
@@ -135,7 +160,7 @@ async function createApp (ssrContext) {
     Vue[installKey] = true
     // Call Vue.use() to install the plugin into vm
     Vue.use(() => {
-      if (!Object.prototype.hasOwnProperty.call(Vue, key)) {
+      if (!Object.prototype.hasOwnProperty.call(Vue.prototype, key)) {
         Object.defineProperty(Vue.prototype, key, {
           get () {
             return this.$root.$options[key]
@@ -145,6 +170,16 @@ async function createApp (ssrContext) {
     })
   }
 
+  // Inject runtime config as $config
+  inject('config', config)
+
+  // Add enablePreview(previewData = {}) in context for plugins
+  if (process.static && process.client) {
+    app.context.enablePreview = function (previewData = {}) {
+      app.previewData = Object.assign({}, previewData)
+      inject('preview', previewData)
+    }
+  }
   // Plugin execution
 
   if (typeof nuxt_plugin_templatesplugin78080f00_cca6d818 === 'function') {
@@ -159,22 +194,40 @@ async function createApp (ssrContext) {
     await nuxt_plugin_axios_c8626d3a(app.context, inject)
   }
 
-  // If server-side, wait for async component to be resolved first
-  if (process.server && ssrContext && ssrContext.url) {
-    await new Promise((resolve, reject) => {
-      router.push(ssrContext.url, resolve, () => {
-        // navigated to a different route in router guard
-        const unregister = router.afterEach(async (to, from, next) => {
+  // Lock enablePreview in context
+  if (process.static && process.client) {
+    app.context.enablePreview = function () {
+      console.warn('You cannot call enablePreview() outside a plugin.')
+    }
+  }
+
+  // Wait for async component to be resolved first
+  await new Promise((resolve, reject) => {
+    // Ignore 404s rather than blindly replacing URL in browser
+    if (process.client) {
+      const { route } = router.resolve(app.context.route.fullPath)
+      if (!route.matched.length) {
+        return resolve()
+      }
+    }
+    router.replace(app.context.route.fullPath, resolve, (err) => {
+      // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
+      if (!err._isRouter) return reject(err)
+      if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
+
+      // navigated to a different route in router guard
+      const unregister = router.afterEach(async (to, from) => {
+        if (process.server && ssrContext && ssrContext.url) {
           ssrContext.url = to.fullPath
-          app.context.route = await getRouteData(to)
-          app.context.params = to.params || {}
-          app.context.query = to.query || {}
-          unregister()
-          resolve()
-        })
+        }
+        app.context.route = await getRouteData(to)
+        app.context.params = to.params || {}
+        app.context.query = to.query || {}
+        unregister()
+        resolve()
       })
     })
-  }
+  })
 
   return {
     app,

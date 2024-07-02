@@ -2,8 +2,9 @@
   <nav :class="{ 'navbar--hidden': !showNavbar }" class="navbar site-nav">
     <div class="flex site-nav-container justify-between">
       <div class="brand-container flex items-center">
-        <a v-scroll-to="{el:'#header', offset: -80}" href="/#header" aria-label="Link back to the top of the home page">
-          <svg
+        <a v-scroll-to="{el:'#header', offset: -80}" href="/#header" class="px-4 text-sm font-semibold text-gray-800 hover:text-orange-500 hidden md:inline-flex transition-colors duration-300" aria-label="Link back to the top of the home page">
+          Harry Langley
+          <!-- <svg
             id="Layer_1"
             class="brand-logo group"
             data-name="Layer 1"
@@ -22,7 +23,7 @@
               <path class="fill-current text-gray-800 group-hover:text-orange-500 transition-colors duration-300" d="M1247,122.85l-.08,14.62h-76.38V4.84h76.38V19.47h-59.6V63.52h48.26V77.59h-48.26v45.26Z" transform="translate(-5 -3.36)" />
               <path class="fill-current text-gray-800 group-hover:text-orange-500 transition-colors duration-300" d="M1336.83,84.63v52.84H1320V84.63L1274.63,4.84h14.71A5.12,5.12,0,0,1,1292.88,6a10,10,0,0,1,2.25,3Z" transform="translate(-5 -3.36)" />
             </g>
-          </svg>
+          </svg> -->
         </a>
       </div>
       <div class="user-action-buttons">

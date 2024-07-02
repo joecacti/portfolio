@@ -31,6 +31,7 @@ export default {
     clear () {
       clearInterval(this._timer)
       clearTimeout(this._throttle)
+      clearTimeout(this._hide)
       this._timer = null
     },
     start () {
@@ -79,7 +80,7 @@ export default {
     },
     hide () {
       this.clear()
-      setTimeout(() => {
+      this._hide = setTimeout(() => {
         this.show = false
         this.$nextTick(() => {
           this.percent = 0
@@ -88,7 +89,7 @@ export default {
       }, 500)
       return this
     },
-    fail () {
+    fail (error) {
       this.canSucceed = false
       return this
     },
