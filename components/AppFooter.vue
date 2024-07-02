@@ -38,7 +38,7 @@
         </a>
       </h5>
       <p class="max-w-screen-lg text-gray-500 text-center text-sm">
-        &copy; {{ currentYear }} Joey Langley
+        &copy; {{ currentYear }} Harry Langley
       </p>
     </div>
   </footer>
